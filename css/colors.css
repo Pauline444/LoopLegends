@@ -1,0 +1,26 @@
+:root {
+    /* Primary colors */
+    --primary: #1e90ff;
+    --primary-dark: #005bb5;
+    --primary-light: #63b3ff;
+    --color-5: red;
+  
+    /* Neutral / grayscale */
+    --white: #ffffff;
+    --black: #000000;
+    --gray-100: #f5f5f5;
+    --gray-300: #dcdcdc;
+    --gray-500: #a0a0a0;
+    --gray-700: #4a4a4a;
+    --gray-900: #1e1e1e;
+  
+    /* Accent colors */
+    --accent: #ff4081;
+    --accent-dark: #c60055;
+  
+    /* Success / warning / error */
+    --success: #28a745;
+    --warning: #ffc107;
+    --error: #dc3545;
+
+  }

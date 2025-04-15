@@ -1,0 +1,27 @@
+.aside-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    height: auto;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.aside-user {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.aside-user img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.aside-user h2 {
+    font-size: 1rem;
+    color: #333;
+    margin-left: 1rem;
+}
