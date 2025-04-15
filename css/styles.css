@@ -1,4 +1,5 @@
 
+
 @import 'navbar.css';
 @import 'aside.css';
 @import 'colors.css';
@@ -22,5 +23,3 @@ body {
     background-color: red;
     height: 100%;
 }
-
-
