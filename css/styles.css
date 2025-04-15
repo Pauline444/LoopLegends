@@ -1,9 +1,8 @@
-
-
 @import 'navbar.css';
 @import 'aside.css';
 @import 'colors.css';
 @import 'variables.css';
+@import 'homepage.css';
 
 * {
     box-sizing: border-box;
