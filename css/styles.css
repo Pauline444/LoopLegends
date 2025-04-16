@@ -2,6 +2,7 @@
 @import 'aside.css';
 @import 'colors.css';
 @import 'variables.css';
+@import 'interactive-content-container.css';
 @import 'homepage.css';
 
 * {
@@ -19,6 +20,5 @@ body {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 1rem;
-    background-color: red;
     height: 100%;
 }

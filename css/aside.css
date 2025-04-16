@@ -1,9 +1,8 @@
 .aside-container {
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f0;
+    background-color: var(--aside-background);
     height: auto;
-    padding: 1rem;
     gap: 2rem;
 }
 
@@ -11,6 +10,14 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
+    padding: 1rem;
+}
+
+.aside-user:hover {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: var(--hover);
 }
 
 .aside-user img {

@@ -1,9 +1,15 @@
-.home-page {
-    display: flex;
-    flex-direction: column;
+.home-page-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+}
+
+.home-card {
+    grid-column-start: 2;
+    grid-row-start: 2;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
 
@@ -27,4 +33,12 @@
     border: 1px solid #444;
     padding: 10px;
     background-color: bisque;
+=======
+}
+
+.home-card div img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
 }
