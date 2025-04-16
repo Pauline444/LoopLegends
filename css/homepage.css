@@ -12,6 +12,30 @@
     justify-content: center;
 }
 
+
+.main-content-cards {
+    text-align: center;
+}
+
+/*HTML klass*/
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+/*Skapa klass i javascript*/
+.user-card {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #444;
+    padding: 10px;
+    background-color: bisque;
+=======
+}
+
 .home-card div img {
     width: 100%;
     height: auto;
