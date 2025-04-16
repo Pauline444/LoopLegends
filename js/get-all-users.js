@@ -1,5 +1,7 @@
-// Global variabel för att spara den aktuella användaren /MIkaela
+// Global variabel för att spara den aktuella användaren /Mikaela
 window.currentUser = null;
+
+import { saveUserId } from './userSession.js'; //för att spara userID per användare (dynamiskt)
 
 document.addEventListener("DOMContentLoaded", () => {
   async function fetchAllUsers() {
@@ -13,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const allUsers = await response.json();
-
       displayUsersInAside(allUsers);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Delete this row if we don't have previous html elements inside aside class="aside-container". Clear any existing content in the aside container
     asideContainer.innerHTML = "";
 
     if (users && users.length > 0) {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         asideUser.dataset.userId = user.id;
 
         const profileImg = document.createElement("img");
-        profileImg.src = "assets/images/profile-image/profile_pic.jpg"; // Use default img from html if we don't find a profile-img from JSONPlaceholder
+        profileImg.src = "assets/images/profile-image/profile_pic.jpg";
         profileImg.alt = `${user.username}'s profile`;
 
         const usernameHeading = document.createElement("h2");
@@ -56,11 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // onclick on user-element /Mikaela
         asideUser.addEventListener("click", () => {
-          // save current user in a global variabel
+          // Save current user in a global variable
           window.currentUser = { id: user.id, username: user.username };
 
-          // show todo-list for user
-          showUserTodoList(user.id, user.username);
+          // Save user ID to session
+          saveUserId(user.id);
+
+          // Show todo list for the user (if function exists)
+          if (typeof showUserTodoList === "function") {
+            showUserTodoList(user.id, user.username);
+          }
+
+          console.log("Clicked user:", user.username, user.id);
         });
       });
     } else {
