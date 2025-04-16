@@ -1,3 +1,5 @@
+import { saveUserId } from './userSession.js';
+
 document.addEventListener("DOMContentLoaded", () => {
     async function fetchAllUsers() {
         try {
@@ -36,6 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const asideUser = document.createElement("section");
                 asideUser.classList.add("aside-user");
 
+                // For saving userID
+                asideUser.dataset.userid = user.id;
+
                 const profileImg = document.createElement("img");
                 profileImg.src = "assets/images/profile-image/profile_pic.jpg"; // Use default img from html if we don't find a profile-img from JSONPlaceholder
                 profileImg.alt = `${user.username}'s profile`;
@@ -46,6 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 asideUser.appendChild(profileImg);
                 asideUser.appendChild(usernameHeading);
                 asideContainer.appendChild(asideUser);
+
+                //Click listener to know which userID each element is
+                asideUser.addEventListener("click", () => {
+                    console.log("Clicked user:", user.username, user.id);
+                    saveUserId(user.id);
+                });
+
             });
         } else {
             asideContainer.textContent = "No users found.";
