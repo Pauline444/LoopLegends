@@ -1,62 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 
+
+    <script src="./js/show-to-do.js" defer></script>
     <script type="module" src="./js/get-all-users.js" defer></script>
     <script type="module" src="./js/userSession.js"></script>
 
     <title>SLL</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-tab"><a href="#">Posts</a></li>
-                <li class="nav-tab"><a href="#">To-Do</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-tab"><a href="#" id="home-link">Homepage</a></li>
+          <li class="nav-tab"><a href="#" id="post.link">Posts</a></li>
+          <li class="nav-tab"><a href="#" id="todo-link">To-Do</a></li>
+        </ul>
+      </nav>
     </header>
-<main class="main-container">
-        <aside class="aside-container">
-            <!-- If the section elements inside html aside delete we won't need to clean this with JS code -->
-            <section class="aside-user">
-                <img src="assets/images/profile-image/profile_pic.jpg" alt="Logo">
-                <h2>Username</h2>
-            </section>
-            <section class="aside-user">
-                <img src="assets/images/profile-image/profile_pic.jpg" alt="Logo">
-                <h2>Username</h2>
-            </section>
-            <section class="aside-user">
-                <img src="assets/images/profile-image/profile_pic.jpg" alt="Logo">
-                <h2>Username</h2>
-            </section>
-            <section class="aside-user">
-                <img src="assets/images/profile-image/profile_pic.jpg" alt="Logo">
-                <h2>Username</h2>
-            </section>
-            <section class="aside-user">
-                <img src="assets/images/profile-image/profile_pic.jpg" alt="Logo">
-                <h2>Username</h2>
-            </section>
-            <section class="aside-user">
-                <img src="assets/images/profile-image/profile_pic.jpg" alt="Logo">
-                <h2>Username</h2>
-            </section>
-            <section class="aside-user">
-                <img src="assets/images/profile-image/profile_pic.jpg" alt="Logo">
-                <h2>Username</h2>
-            </section>
-        </aside>
-          
-
+    <main class="main-container">
+      <aside class="aside-container">
+        <!-- If the section elements inside html aside delete we won't need to clean this with JS code -->
+        <section class="aside-user">
+          <img
+            src="assets/images/profile-image/profile_pic.jpg"
+            data-user-id="1"
+            alt="Logo"
+          />
+          <h2>Username</h2>
+        </section>
+        <section class="aside-user">
+          <img
+            src="assets/images/profile-image/profile_pic.jpg"
+            data-user-id="2"
+            alt="Logo"
+          />
+          <h2>Username</h2>
+        </section>
+        <section class="aside-user">
+          <img
+            src="assets/images/profile-image/profile_pic.jpg"
+            data-user-id="3"
+            alt="Logo"
+          />
+          <h2>Username</h2>
+        </section>
+        <section class="aside-user">
+          <img
+            src="assets/images/profile-image/profile_pic.jpg"
+            data-user-id="4"
+            alt="Logo"
+          />
+          <h2>Username</h2>
+        </section>
+        <section class="aside-user">
+          <img
+            src="assets/images/profile-image/profile_pic.jpg"
+            data-user-id="5"
+            alt="Logo"
+          />
+          <h2>Username</h2>
+        </section>
+        <section class="aside-user">
+          <img
+            src="assets/images/profile-image/profile_pic.jpg"
+            data-user-id="6"
+            alt="Logo"
+          />
+          <h2>Username</h2>
+        </section>
+        <section class="aside-user">
+          <img
+            src="assets/images/profile-image/profile_pic.jpg"
+            data-user-id="7"
+            alt="Logo"
+          />
+          <h2>Username</h2>
+        </section>
+      </aside>
         <section class="interactive-content-container">
             <div class="home-page-container">
                 <div class="home-card">
@@ -74,6 +101,5 @@
             </div>
         </section>
     </main>
-</body>
-
+  </body>
 </html>
