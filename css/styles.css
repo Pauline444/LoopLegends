@@ -5,6 +5,7 @@
 @import 'interactive-content-container.css';
 @import 'homepage.css';
 @import 'user-posts.css';
+@import 'comments-styles.css';
 
 * {
     box-sizing: border-box;
