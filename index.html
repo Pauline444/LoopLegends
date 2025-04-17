@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/styles.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/styles.css" />
 
 
-    <script src="./js/show-to-do.js" defer></script>
-    <script type="module" src="./js/get-all-users.js" defer></script>
-    <script type="module" src="./js/userSession.js"></script>
-    <script type="module" src="./js/get-user-posts.js"></script>
+  <script src="./js/show-to-do.js" defer></script>
+  <script type="module" src="./js/get-all-users.js" defer></script>
+  <script type="module" src="./js/userSession.js"></script>
+  <script type="module" src="./js/get-user-posts.js"></script>
+  <script type="module" src="./js/get-post-comments.js"></script>
 
-    <title>SLL</title>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <ul class="nav-list">
-          <li class="nav-tab"><a href="#" id="home-link">Homepage</a></li>
-          <li class="nav-tab"><a href="#" id="post.link">Posts</a></li>
-          <li class="nav-tab"><a href="#" id="todo-link">To-Do</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main-container">
-      <aside class="aside-container">
-        
-        <!-- User-aside created dinamiclly with this structure:
+  <title>SLL</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="nav-list">
+        <li class="nav-tab"><a href="#" id="home-link">Homepage</a></li>
+        <li class="nav-tab"><a href="#" id="post.link">Posts</a></li>
+        <li class="nav-tab"><a href="#" id="todo-link">To-Do</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-container">
+    <aside class="aside-container">
+
+      <!-- User-aside created dinamiclly with this structure:
         <section class="aside-user">
           <img
             src="assets/images/profile-image/profile_pic.jpg"
@@ -37,25 +40,26 @@
           />
           <h2>Username</h2>
         </section> -->
-        
-      </aside>
 
-        <section class="interactive-content-container">
-            <div class="home-page-container">
-                <div class="home-card">
-                    <div>
-                        <img src="assets/images/image.png" alt="Logo">
-                    </div>
-                    <h1>Social Looping Legends</h1>
-                    <p>This is where the main content will go.</p>
-                </div>
-               <div class="main-content-cards">
-                <div class="user-cards">
-                 <!-- User cards will be dynamically inserted here -->
-                 </div>
-              </div>
-            </div>
-        </section>
-    </main>
-  </body>
+    </aside>
+
+    <section class="interactive-content-container">
+      <div class="home-page-container">
+        <div class="home-card">
+          <div>
+            <img src="assets/images/image.png" alt="Logo">
+          </div>
+          <h1>Social Looping Legends</h1>
+          <p>This is where the main content will go.</p>
+        </div>
+        <div class="main-content-cards">
+          <div class="user-cards">
+            <!-- User cards will be dynamically inserted here -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
