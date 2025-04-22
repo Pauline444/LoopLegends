@@ -1,9 +1,7 @@
 'use strict';
 
 
-const userCardsContainer = document.querySelector('main-content-cards');
-
-document.body.appendChild(userCardsContainer);
+const userCardsContainer = document.querySelector('.main-content-cards');
 
 async function fetchUsers() {
     try {
@@ -12,7 +10,7 @@ async function fetchUsers() {
         showUsers(data);
     } catch (error) {
         console.error('Error fetching users: ', error);
-        userCardsElement.innerHTML = '<h3>Ett fel inträffade vid hämtningen av användare.</h3>';
+        userCardsContainer.innerHTML = '<h3>Ett fel inträffade vid hämtningen av användare.</h3>';
     }
 }
 
@@ -23,7 +21,7 @@ async function showUsers(users) {
             const userCard = document.createElement('div');
             userCard.className = 'user-card';
 
-            const userImageUrl = `https://robohash.org/${user.id}?size=150x150&set=set2`;
+            const userImageUrl = `https://robohash.org/${user.id}?size=150x150&set=set5`;
 
             userCard.innerHTML = `
                 <div class="user-img">
