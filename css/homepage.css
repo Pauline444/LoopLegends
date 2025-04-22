@@ -1,6 +1,7 @@
 .home-page-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
     grid-template-rows: repeat(3, 1fr);
     height: 100vh;
 }
@@ -33,7 +34,6 @@
     border: 1px solid #444;
     padding: 10px;
     background-color: bisque;
-=======
 }
 
 .home-card div img {
