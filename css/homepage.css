@@ -16,10 +16,6 @@
 
 .main-content-cards {
     text-align: center;
-}
-
-/*HTML klass*/
-.user-cards {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -29,11 +25,50 @@
 
 /*Skapa klass i javascript*/
 .user-card {
-    width: 200px;
+    width: calc(25% - 30px);
     height: 200px;
     border: 1px solid #444;
-    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     background-color: bisque;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-img {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    text-align: center;
+}
+
+.user-info p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.user-info a {
+    color: #222;
+    text-decoration: none;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
 }
 
 .home-card div img {
