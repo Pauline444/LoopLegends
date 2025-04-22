@@ -1,8 +1,7 @@
 'use strict';
 
 
-const userCardsContainer = document.createElement('div');
-userCardsContainer.className = 'user-cards-container';
+const userCardsContainer = document.querySelector('main-content-cards');
 
 document.body.appendChild(userCardsContainer);
 
@@ -44,3 +43,4 @@ async function showUsers(users) {
         userCardsContainer.innerHTML = '<h3>Ett fel inträffade vid visning av användare.</h3>';
     }
 }
+document.addEventListener('DOMContentLoaded', fetchUsers);
