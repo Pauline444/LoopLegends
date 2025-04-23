@@ -84,6 +84,8 @@
 
 .user-info a:hover {
     text-decoration: underline;
+    border: 1px solid #444;
+    padding: 10px;
 }
 
 .home-card div img {
