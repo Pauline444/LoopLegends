@@ -7,14 +7,15 @@
 
   <link rel="stylesheet" href="css/styles.css" />
 
-
+  <!-- Order scripts for proper loading sequence -->
+  <script src="./js/navbar.js" defer></script>
+  <script src="./js/home.js" defer></script>
   <script src="./js/show-to-do.js" defer></script>
   <script type="module" src="./js/get-all-users.js" defer></script>
-  <script type="module" src="./js/userSession.js"></script>
-  <script type="module" src="./js/get-user-posts.js"></script>
-  <script type="module" src="./js/get-post-comments.js"></script>
-  <script type="module" src="./js/home-cards.js"></script>
-
+  <script type="module" src="./js/userSession.js" defer></script>
+  <script type="module" src="./js/get-user-posts.js" defer></script>
+  <script type="module" src="./js/get-post-comments.js" defer></script>
+  <script type="module" src="./js/home-cards.js" defer></script>
 
   <title>SLL</title>
 </head>
@@ -23,7 +24,7 @@
   <header>
     <nav>
       <ul class="nav-list">
-        <li class="nav-tab"><a href="#" id="home-link">Homepage</a></li>
+        <li class="nav-tab"><a href="#" id="home-link">Home</a></li>
         <li class="nav-tab"><a href="#" id="post.link">Posts</a></li>
         <li class="nav-tab"><a href="#" id="todo-link">To-Do</a></li>
       </ul>
@@ -44,22 +45,10 @@
     </aside>
 
 
-        <section class="interactive-content-container">
-            <div class="home-page-container">
-                <div class="home-card">
-                    <div>
-                        <img src="assets/images/image.png" alt="Logo">
-                    </div>
-                    <h1>Social Looping Legends</h1>
-                    <p>This is where the main content will go.</p>
-                </div>
-            </div>
-            </div>
-            <div class="main-content-cards">
-                <!-- User cards will be dynamically inserted here -->
-            </div>
-        </section>
-    </main>
+    <section class="interactive-content-container">
+        <!-- Content will be loaded dynamically by JavaScript -->
+    </section>
+  </main>
 </body>
 
 </html>

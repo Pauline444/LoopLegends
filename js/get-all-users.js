@@ -43,19 +43,22 @@ document.addEventListener("DOMContentLoaded", () => {
         // Save userId i dataset for later purpose /Mikaela
         asideUser.dataset.userId = user.id;
 
-        const profileImg = document.createElement("img");
-        profileImg.src = "assets/images/profile-image/profile_pic.jpg";
-        profileImg.alt = `${user.username}'s profile`;
-
         const usernameHeading = document.createElement("h2");
         usernameHeading.textContent = user.username;
 
-        asideUser.appendChild(profileImg);
         asideUser.appendChild(usernameHeading);
         asideContainer.appendChild(asideUser);
 
         // onclick on user-element /Mikaela
         asideUser.addEventListener("click", () => {
+          // Remove active class from all users first
+          document.querySelectorAll('.aside-user').forEach(userEl => {
+            userEl.classList.remove('aside-user-active');
+          });
+          
+          // Add active class to the clicked user
+          asideUser.classList.add('aside-user-active');
+          
           // Save current user in a global variable
           window.currentUser = { id: user.id, username: user.username };
 

@@ -1,13 +1,13 @@
 .aside-container {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: auto;
     min-width: 227px;
     background-color: var(--aside-background);
     align-items: center;
     justify-content: flex-start;
     padding: .5rem 0;
-    gap: .5rem;
+    gap: .8rem; /* Increased gap between users */
     flex-shrink: 0;
 }
 
@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 95%;
-    padding: .5rem;
+    width: 98%; /* Increased width to reduce right margin */
+    padding: .8rem; /* Increased vertical padding for more height */
     cursor: pointer;
     border-radius: var(--border-radius);
     flex-shrink: 1;
@@ -28,21 +28,23 @@
     backdrop-filter: blur(5px);
 }
 
-.aside-user img {
-    width: 20%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: var(--box-shadow);
-    flex-shrink: 0;
-}
-
 .aside-user h2 {
     font-size: 1rem;
     color: #333;
-    margin-left: 1rem;
     flex-grow: 1;
     flex-shrink: 1;
     min-width: 0;
     word-break: break-word;
     overflow-wrap: break-word;
+    padding-left: 0.8rem; /* Added left padding to create distance from left edge */
+}
+
+/* Active user styling to match the active navbar item */
+.aside-user-active {
+    background-color: var(--primary);
+    box-shadow: var(--box-shadow);
+}
+
+.aside-user-active h2 {
+    color: var(--white);
 }

@@ -1,9 +1,25 @@
 'use strict';
 
-
-const userCardsContainer = document.querySelector('.main-content-cards');
+// Listen for DOMContentLoaded or when the showHomepage event is fired
+document.addEventListener('DOMContentLoaded', function() {
+    fetchUsers();
+    
+    // Also listen for the showHomepage event to refresh data when returning to home
+    document.addEventListener('showHomepage', fetchUsers);
+    
+    // Add listener for the new loadHomeCards event
+    document.addEventListener('loadHomeCards', fetchUsers);
+});
 
 async function fetchUsers() {
+    // Find the user cards container which is now inside the interactive-content-container
+    const userCardsContainer = document.querySelector('.interactive-content-container .main-content-cards');
+    
+    if (!userCardsContainer) {
+        console.error('Could not find .main-content-cards container');
+        return;
+    }
+    
     try {
         const [usersResponse, postsResponse] = await Promise.all([
             fetch('https://jsonplaceholder.typicode.com/users'),
@@ -13,14 +29,14 @@ async function fetchUsers() {
         const users = await usersResponse.json();
         const posts = await postsResponse.json();
 
-        showUsers(users, posts);
+        showUsers(users, posts, userCardsContainer);
     } catch (error) {
         console.error('Error fetching users: ', error);
         userCardsContainer.innerHTML = '<h3>Ett fel inträffade vid hämtningen av användare.</h3>';
     }
 }
 
-async function showUsers(users, posts) {
+function showUsers(users, posts, userCardsContainer) {
     userCardsContainer.innerHTML = '';
     try {
         users.forEach(user => {
@@ -63,4 +79,3 @@ async function showUsers(users, posts) {
         userCardsContainer.innerHTML = '<h3>Ett fel inträffade vid visning av användare.</h3>';
     }
 }
-document.addEventListener('DOMContentLoaded', fetchUsers);
