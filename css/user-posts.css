@@ -1,12 +1,12 @@
 .posts-wrapper {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    background-color: var(--gray-100);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: var(--gray-100);
 }
 
 .posts-container {
@@ -16,6 +16,8 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .post-card {

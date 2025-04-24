@@ -1,40 +1,48 @@
 .aside-container {
     display: flex;
     flex-direction: column;
+    width: 25%;
+    min-width: 227px;
     background-color: var(--aside-background);
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding: .5rem 0;
     gap: .5rem;
+    flex-shrink: 0;
 }
 
 .aside-user {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    height: auto;
     width: 95%;
     padding: .5rem;
     cursor: pointer;
     border-radius: var(--border-radius);
+    flex-shrink: 1;
+    overflow: hidden;
 }
 
 .aside-user:hover {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
     background-color: var(--hover);
     backdrop-filter: blur(5px);
 }
 
 .aside-user img {
-    width: 100%;
+    width: 20%;
     height: auto;
     border-radius: 50%;
     box-shadow: var(--box-shadow);
+    flex-shrink: 0;
 }
 
 .aside-user h2 {
     font-size: 1rem;
     color: #333;
     margin-left: 1rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
