@@ -50,6 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
         cardsDiv.className = 'main-content-cards';
         interactiveContentContainer.appendChild(cardsDiv);
         
+        // Clear active user when showing homepage
+        document.querySelectorAll('.aside-user').forEach(userEl => {
+            userEl.classList.remove('aside-user-active');
+        });
+        
         // Dispatch a custom event to notify other modules to refresh data
         document.dispatchEvent(new CustomEvent('showHomepage'));
     }
@@ -62,6 +67,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set active nav item
         setActiveNavItem(postLink);
         
+        // If a user is selected (from window.currentUser), highlight that user
+        if (window.currentUser && window.currentUser.id) {
+            // First clear all active users
+            document.querySelectorAll('.aside-user').forEach(userEl => {
+                userEl.classList.remove('aside-user-active');
+            });
+            
+            // Then highlight the current user
+            const currentUserElement = document.querySelector(`.aside-user[data-user-id="${window.currentUser.id}"]`);
+            if (currentUserElement) {
+                currentUserElement.classList.add('aside-user-active');
+            }
+        }
+        
         // Dispatch a custom event to notify other modules
         document.dispatchEvent(new CustomEvent('showPosts'));
     }
@@ -73,6 +92,20 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Set active nav item
         setActiveNavItem(todoLink);
+        
+        // If a user is selected (from window.currentUser), highlight that user
+        if (window.currentUser && window.currentUser.id) {
+            // First clear all active users
+            document.querySelectorAll('.aside-user').forEach(userEl => {
+                userEl.classList.remove('aside-user-active');
+            });
+            
+            // Then highlight the current user
+            const currentUserElement = document.querySelector(`.aside-user[data-user-id="${window.currentUser.id}"]`);
+            if (currentUserElement) {
+                currentUserElement.classList.add('aside-user-active');
+            }
+        }
         
         // Dispatch a custom event to notify other modules
         document.dispatchEvent(new CustomEvent('showTodo'));
