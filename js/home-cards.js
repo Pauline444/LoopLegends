@@ -27,7 +27,7 @@ async function showUsers(users, posts) {
 
             const userFirstPost = posts.find(post => post.userId === user.id);
             const postPreview = userFirstPost
-                ? userFirstPost.title.substring(0, 15) + (userFirstPost.title.length > 15 ? '...' : '')
+                ? userFirstPost.title.substring(0, 100) + (userFirstPost.title.length > 100 ? '...' : '')
                 : 'Ingen bloggpost tillgänglig';
 
             const userCard = document.createElement('div');
@@ -40,6 +40,20 @@ async function showUsers(users, posts) {
                     <p><a href="mailto:${user.email}">${user.email}</a></p>
                     <p class="post-preview">${postPreview}</p>
                 </div>`;
+
+            userCard.addEventListener('click', function () {
+                window.currentUser = {
+                    id: user.id,
+                    username: user.username
+                };
+
+                const postLink = document.getElementById('post.link');
+                if (postLink) {
+                    postLink.click();
+                } else {
+                    console.error('Kunde inte hitta elementet med ID post.link');
+                }
+            });
 
             // Lägger till korten i containern
             userCardsContainer.appendChild(userCard);
