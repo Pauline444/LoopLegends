@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Also listen for the showHomepage event to refresh data when returning to home
     document.addEventListener('showHomepage', fetchUsers);
+    
+    // Add listener for the new loadHomeCards event
+    document.addEventListener('loadHomeCards', fetchUsers);
 });
 
 async function fetchUsers() {

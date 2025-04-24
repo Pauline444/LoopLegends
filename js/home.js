@@ -3,45 +3,37 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Function to create the home page content
     function createHomePageContent() {
-        // Find the home page container that was created in navbar.js
-        const homePageContainer = document.querySelector('.interactive-content-container .home-page-container');
-        
-        // If the container doesn't exist, create it first
-        if (!homePageContainer) {
-            const interactiveContainer = document.querySelector('.interactive-content-container');
-            if (interactiveContainer) {
-                // Clear any existing content
-                interactiveContainer.innerHTML = '';
-                
-                // Create the home page container
-                const newHomePageContainer = document.createElement('div');
-                newHomePageContainer.className = 'home-page-container';
-                interactiveContainer.appendChild(newHomePageContainer);
-                
-                // Create cards container for user cards
-                const cardsDiv = document.createElement('div');
-                cardsDiv.className = 'main-content-cards';
-                interactiveContainer.appendChild(cardsDiv);
-                
-                // Now call createHomePageContent again to populate the new container
-                setTimeout(createHomePageContent, 0);
-                return;
-            }
-        } else {
+        const interactiveContainer = document.querySelector('.interactive-content-container');
+        if (interactiveContainer) {
             // Clear any existing content
-            homePageContainer.innerHTML = '';
+            interactiveContainer.innerHTML = '';
             
-            // Create the home card
-            const homeCard = document.createElement('div');
-            homeCard.className = 'home-card';
+            // Create the home page container as main wrapper
+            const homePageContainer = document.createElement('div');
+            homePageContainer.className = 'home-page-container';
+            interactiveContainer.appendChild(homePageContainer);
+            
+            // Create the header section with logo and text
+            const headerSection = document.createElement('div');
+            headerSection.className = 'home-header';
+            
+            // Create a container for horizontal layout
+            const horizontalContainer = document.createElement('div');
+            horizontalContainer.className = 'home-card-horizontal';
             
             // Create image container
             const imageContainer = document.createElement('div');
+            imageContainer.className = 'logo-container';
             
             // Create and setup image
             const logoImage = document.createElement('img');
             logoImage.src = 'assets/images/image.png';
             logoImage.alt = 'Logo';
+            logoImage.className = 'home-logo';
+            
+            // Create text container
+            const textContainer = document.createElement('div');
+            textContainer.className = 'home-text-container';
             
             // Create heading
             const heading = document.createElement('h1');
@@ -51,14 +43,29 @@ document.addEventListener('DOMContentLoaded', function() {
             const paragraph = document.createElement('p');
             paragraph.textContent = 'This is where the main content will go.';
             
-            // Assemble the components
+            // Assemble the header components
             imageContainer.appendChild(logoImage);
-            homeCard.appendChild(imageContainer);
-            homeCard.appendChild(heading);
-            homeCard.appendChild(paragraph);
+            textContainer.appendChild(heading);
+            textContainer.appendChild(paragraph);
+            horizontalContainer.appendChild(imageContainer);
+            horizontalContainer.appendChild(textContainer);
+            headerSection.appendChild(horizontalContainer);
             
-            // Add the card to the container
-            homePageContainer.appendChild(homeCard);
+            // Add the header section to the container
+            homePageContainer.appendChild(headerSection);
+            
+            // Create cards container for user cards
+            const cardsDiv = document.createElement('div');
+            cardsDiv.className = 'main-content-cards';
+            
+            // Add cards container directly below the header in the same container
+            homePageContainer.appendChild(cardsDiv);
+            
+            // Now that the structure is in place, trigger the cards to load
+            // by dispatching a custom event
+            setTimeout(() => {
+                document.dispatchEvent(new CustomEvent('loadHomeCards'));
+            }, 100);
         }
     }
     
