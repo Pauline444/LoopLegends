@@ -43,14 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Save userId i dataset for later purpose /Mikaela
         asideUser.dataset.userId = user.id;
 
-        const profileImg = document.createElement("img");
-        profileImg.src = "assets/images/profile-image/profile_pic.jpg";
-        profileImg.alt = `${user.username}'s profile`;
-
         const usernameHeading = document.createElement("h2");
         usernameHeading.textContent = user.username;
 
-        asideUser.appendChild(profileImg);
         asideUser.appendChild(usernameHeading);
         asideContainer.appendChild(asideUser);
 

@@ -49,32 +49,6 @@
         <!-- Content will be loaded dynamically by JavaScript -->
     </section>
   </main>
-  
-  <!-- Force home page to load on refresh -->
-  <script>
-    window.onload = function() {
-      // Short timeout to ensure all scripts are loaded
-      setTimeout(function() {
-        const interactiveContentContainer = document.querySelector('.interactive-content-container');
-        
-        // Check if container is empty or has no meaningful content
-        if (interactiveContentContainer && 
-            (!interactiveContentContainer.children.length || 
-             interactiveContentContainer.children.length === 0 || 
-             !interactiveContentContainer.innerHTML.trim())) {
-          
-          // Manually trigger a click on the home link to show homepage
-          const homeLink = document.getElementById('home-link');
-          if (homeLink) {
-            homeLink.click();
-          } else {
-            // Fallback if home link not found - dispatch show homepage event
-            document.dispatchEvent(new CustomEvent('showHomepage'));
-          }
-        }
-      }, 100);
-    };
-  </script>
 </body>
 
 </html>
