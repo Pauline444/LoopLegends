@@ -1,7 +1,7 @@
 // Global variabel för att spara den aktuella användaren /Mikaela
 window.currentUser = null;
 
-import { saveUserId } from './userSession.js'; //för att spara userID per användare (dynamiskt)
+import { saveUserId } from "./userSession.js"; //för att spara userID per användare (dynamiskt)
 
 document.addEventListener("DOMContentLoaded", () => {
   async function fetchAllUsers() {
@@ -62,9 +62,18 @@ document.addEventListener("DOMContentLoaded", () => {
           // Save user ID to session
           saveUserId(user.id);
 
-          // Show todo list for the user (if function exists)
-          if (typeof showUserTodoList === "function") {
-            showUserTodoList(user.id, user.username);
+          // Spara användaren globalt
+          window.currentUser = { id: user.id, username: user.username };
+
+          // Spara användar-ID i sessionStorage
+          saveUserId(user.id);
+
+          // Simulera klick på länken som visar posts
+          const postLink = document.getElementById("post.link");
+          if (postLink) {
+            postLink.click();
+          } else {
+            console.warn("post.link hittades inte i DOM:en");
           }
 
           console.log("Clicked user:", user.username, user.id);
