@@ -1,6 +1,7 @@
 nav {
     background-color: var(--aside-background);
     height: 4rem;
+    flex-shrink: 0;
 }
 
 .nav-list {
