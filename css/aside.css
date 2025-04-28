@@ -39,7 +39,7 @@
 
 .aside-user h2 {
     font-size: 1rem;
-    color: #333;
+    color: var(--text-color);
     flex-grow: 1;
     flex-shrink: 1;
     min-width: 0;
@@ -79,7 +79,6 @@
     display: block;
     width: 100%;
     height: 3px;
-    background-color: var(--text-color);
     border-radius: 3px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
