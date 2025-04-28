@@ -21,8 +21,24 @@ body {
     flex-direction: column;
 }
 
+/* Prevent scrolling when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .interactive-content-container {
+        padding-top: 1rem;
+    }
 }
