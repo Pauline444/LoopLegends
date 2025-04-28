@@ -1,11 +1,15 @@
 :root {
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* Primary colors */
   --primary: #b9fb9f;
   --primary-dark: #005bb5;
   --primary-light: #63b3ff;
   --color-5: red;
 =======
+=======
+
+>>>>>>> f2e8405980e455f2d3221d571edee8f92741ceae
     /* Primary colors */
     --primary: #b9fb9f;
     --primary-dark: #005bb5;
@@ -32,7 +36,10 @@
     --success: #28a745;
     --warning: #ffc107;
     --error: #dc3545;
+<<<<<<< HEAD
 >>>>>>> 1cb7f0b0208437d31f2d3d325d3a5e43390f5f22
+=======
+>>>>>>> f2e8405980e455f2d3221d571edee8f92741ceae
 
   /* Neutral / grayscale */
   --white: #ffffff;
@@ -62,8 +69,11 @@
   --aside-background: #d3d3d3;
   --gray-900: #1e1e1e;
 }
+<<<<<<< HEAD
 =======
     
     --gray-900: #1e1e1e;
   }
 >>>>>>> 1cb7f0b0208437d31f2d3d325d3a5e43390f5f22
+=======
+>>>>>>> f2e8405980e455f2d3221d571edee8f92741ceae
