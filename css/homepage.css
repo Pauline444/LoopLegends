@@ -1,3 +1,5 @@
+/* Horizontal layout for the home card logo and text */
+
 .home-page-container {
     display: flex;
     flex-direction: column;
@@ -16,6 +18,58 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.home-card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    width: 100%;
+    border: 1px solid #222;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    width: 180px;
+    /* Making the logo container smaller */
+}
+
+.home-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    border: 1px solid #8e2020;
+}
+
+.home-heading {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    border: 1px solid #222;
+}
+
+.home-paragraph {
+    font-size: 0.7rem;
+    font-weight: lighter;
+    border: 1px solid #222;
+}
+
+.home-paragraph-two {
+    border: 1px solid #222;
+}
+
+
+
+/* Layout for home content cards */
+
 .main-content-cards {
     text-align: center;
     display: flex;
@@ -26,10 +80,10 @@
     width: 100%;
 }
 
-/*Skapa klass i javascript*/
+/* Class in javascript */
 .user-card {
     width: 300px;
-    height: 200px;
+    height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px;
     margin-bottom: 10px;
@@ -37,9 +91,7 @@
 
 .user-card,
 .post-preview {
-    border: 1px solid #999;
     border-radius: 10px;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
     background-color: #F9F9F4;
 }
 
@@ -87,45 +139,4 @@
     height: auto;
     border-radius: 50%;
     box-shadow: var(--box-shadow);
-}
-
-/* Horizontal layout for the home card logo and text */
-.home-card-horizontal {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    width: 100%;
-}
-
-.logo-container {
-    flex-shrink: 0;
-    width: 80px;
-    /* Making the logo container smaller */
-}
-
-.home-logo {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: var(--box-shadow);
-}
-
-.home-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.home-text-container h1 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-}
-
-.home-text-container p {
-    margin: 0;
-    font-size: 1rem;
 }
