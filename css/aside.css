@@ -7,8 +7,7 @@
     align-items: center;
     justify-content: flex-start;
     padding: .5rem 0;
-    gap: .8rem;
-    /* Increased gap between users */
+    gap: .8rem; /* Increased gap between users */
     flex-shrink: 0;
 }
 
@@ -16,10 +15,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 98%;
-    /* Increased width to reduce right margin */
-    padding: .8rem;
-    /* Increased vertical padding for more height */
+    width: 98%; /* Increased width to reduce right margin */
+    padding: .8rem; /* Increased vertical padding for more height */
     cursor: pointer;
     border-radius: var(--border-radius);
     flex-shrink: 1;
@@ -48,8 +45,7 @@
     min-width: 0;
     word-break: break-word;
     overflow-wrap: break-word;
-    padding-left: 0.8rem;
-    /* Added left padding to create distance from left edge */
+    padding-left: 0.8rem; /* Added left padding to create distance from left edge */
 }
 
 /* Active user styling to match the active navbar item */
@@ -58,7 +54,7 @@
 }
 
 .aside-user-active h2 {
-    color: var(--text-color);
+    color: var(--black);
 }
 
 /* Hamburger button styling */

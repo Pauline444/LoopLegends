@@ -1,19 +1,92 @@
+/* Horizontal layout for the home card logo and text */
+
 .home-page-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     min-height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    padding: 30px;
 }
 
 .home-header {
     width: 100%;
     margin-bottom: 30px;
+<<<<<<< HEAD
+    background-color: #f9f9f9;
+    border-radius: 10px;
+=======
     padding: 15px;
-    background-color: var(--background-color);
+    background-color: #f9f9f9;
     border-radius: 8px;
+>>>>>>> 75ea8a1 (Merge branch 'main' into feature/main-content-cards)
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.home-card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    width: 93%;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    width: 260px;
+    margin: 30px;
+    /* Making the logo container smaller */
+}
+
+.home-logo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 30px auto;
+}
+
+.home-heading {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: var(--primary);
+}
+
+.home-paragraph {
+    font-size: 3.3rem;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.home-paragraph-two {
+    max-width: 650px;
+    background-color: #243a23;
+    color: rgb(246, 242, 224);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+    font-size: smaller;
+    font-weight: lighter;
+    line-height: 1.4;
+}
+
+
+
+/* Layout for home content cards */
+
+.interactive-content-container {
+    background-color: rgb(220, 220, 196);
 }
 
 .main-content-cards {
@@ -22,25 +95,23 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 15px;
     width: 100%;
 }
 
-/*Skapa klass i javascript*/
+/* Class in javascript */
 .user-card {
-    width: 300px;
-    height: 200px;
+    width: 320px;
+    height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px;
-    margin-bottom: 10px;
 }
 
 .user-card,
 .post-preview {
-    border: 1px solid #999;
     border-radius: 10px;
-    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
     background-color: #F9F9F4;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .post-preview {
@@ -87,45 +158,4 @@
     height: auto;
     border-radius: 50%;
     box-shadow: var(--box-shadow);
-}
-
-/* Horizontal layout for the home card logo and text */
-.home-card-horizontal {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-    width: 100%;
-}
-
-.logo-container {
-    flex-shrink: 0;
-    width: 80px;
-    /* Making the logo container smaller */
-}
-
-.home-logo {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: var(--box-shadow);
-}
-
-.home-text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.home-text-container h1 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-}
-
-.home-text-container p {
-    margin: 0;
-    font-size: 1rem;
 }
