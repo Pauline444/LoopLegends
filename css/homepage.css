@@ -16,8 +16,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .main-content-cards {
     text-align: center;
     display: flex;
@@ -42,7 +40,7 @@
     border: 1px solid #999;
     border-radius: 10px;
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
-    background-color: #eaeaea;
+    background-color: #F9F9F4;
 }
 
 .post-preview {
