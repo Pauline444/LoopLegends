@@ -13,10 +13,9 @@
     max-width: 1200px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    background-color: #f9f9f9;
     border-radius: var(--border-radius);
     box-shadow: var(--border-shadow);
-    background-color: var(--white);
+    background-color: var(--background-color);
     backdrop-filter: var(--backdrop-filter);
 }
 
