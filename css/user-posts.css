@@ -134,7 +134,7 @@
 }
 
 .post-card {
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     border-radius: var(--border-radius);
     padding: 1rem;
     box-shadow: var(--border-shadow);

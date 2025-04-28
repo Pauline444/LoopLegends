@@ -24,7 +24,7 @@
 .comment-item {
   padding: 8px;
   margin-bottom: 8px;
-  background-color: white;
+  background-color: inherit;
   border-left: 3px solid #3498db;
   border-radius: 3px;
   font-size: 14px;
