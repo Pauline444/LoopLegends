@@ -1,6 +1,6 @@
 :root {
     /* Primary colors */
-    --primary: #1e90ff;
+    --primary: #b9fb9f;
     --primary-dark: #005bb5;
     --primary-light: #63b3ff;
     --color-5: red;
@@ -24,7 +24,11 @@
     --error: #dc3545;
 
     /* Aside colors */
-    --hover: #a0a0a0;
+    --hover: #E8E8E0;
+
+    --text-color: #58615C;
+
+    --backgrdound-color: #F9F9F4;
     --aside-background: #d3d3d3;
     --gray-900: #1e1e1e;
   }
