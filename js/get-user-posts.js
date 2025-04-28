@@ -26,20 +26,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const postsWrapper = document.createElement("div");
     postsWrapper.classList.add("posts-wrapper");
 
-    // Create the heading
-    const heading = document.createElement("h2");
-    heading.textContent = `Inlägg för ${username}`;
-    postsWrapper.appendChild(heading);
+    // Create a loading indicator
+    const loadingIndicator = document.createElement("p");
+    loadingIndicator.textContent = "Laddar användarinformation...";
+    postsWrapper.appendChild(loadingIndicator);
+
+    // Clear the interactive content container and append the posts-wrapper
+    contentContainer.innerHTML = "";
+    contentContainer.appendChild(postsWrapper);
+
+    // Use the UserHeaderCreator module to create a detailed user header
+    if (window.UserHeaderCreator) {
+      const userHeader = await window.UserHeaderCreator.createUserHeader(userId, username);
+      // Replace loading indicator with user header
+      postsWrapper.replaceChild(userHeader, loadingIndicator);
+    } else {
+      // Fallback if module is not available
+      const heading = document.createElement("h2");
+      heading.textContent = `Inlägg för ${username}`;
+      postsWrapper.replaceChild(heading, loadingIndicator);
+      console.error('UserHeaderCreator module not found');
+    }
 
     // Create the posts-container div
     const postsContainer = document.createElement("div");
     postsContainer.classList.add("posts-container");
     postsContainer.textContent = "Laddar inlägg...";
     postsWrapper.appendChild(postsContainer);
-
-    // Clear the interactive content container and append the posts-wrapper
-    contentContainer.innerHTML = "";
-    contentContainer.appendChild(postsWrapper);
 
     try {
       const response = await fetch(
