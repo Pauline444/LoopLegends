@@ -16,6 +16,10 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.interactive-content-container {
+    background-color: rgb(220, 220, 196);
+}
+
 .main-content-cards {
     text-align: center;
     display: flex;
@@ -23,17 +27,16 @@
     flex-direction: row;
     justify-content: space-evenly;
     gap: 30px;
-    margin-right: 10px;
-    margin-bottom: 30px;
     width: 100%;
 }
 
 /*Skapa klass i javascript*/
 .user-card {
-    width: calc(30% - 30px);
+    width: 300px;
     height: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .user-card,
@@ -102,7 +105,8 @@
 
 .logo-container {
     flex-shrink: 0;
-    width: 80px; /* Making the logo container smaller */
+    width: 80px;
+    /* Making the logo container smaller */
 }
 
 .home-logo {
