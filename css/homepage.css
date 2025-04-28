@@ -11,9 +11,13 @@
     width: 100%;
     margin-bottom: 30px;
     padding: 15px;
-    background-color: var(--background-color);
+    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.interactive-content-container {
+    background-color: rgb(220, 220, 196);
 }
 
 .main-content-cards {
@@ -40,7 +44,7 @@
     border: 1px solid #999;
     border-radius: 10px;
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
-    background-color: #F9F9F4;
+    background-color: #eaeaea;
 }
 
 .post-preview {
