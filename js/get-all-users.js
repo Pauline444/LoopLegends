@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.warn("post.link hittades inte i DOM:en");
           }
 
-          console.log("Clicked user:", user.username, user.id);
         });
       });
     } else {

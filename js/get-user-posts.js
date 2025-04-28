@@ -93,9 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
       container.appendChild(postCard);
     });
 
-    // Log the stored post IDs for the current user to the console
-    console.log("Inläggs-ID för användare", userId, ":", userPostsIds[userId]);
-
     // Trigga en event för att signalera att poster har laddats
     // Detta kommer att fånga upp av vår get-post-comments.js
     const event = new CustomEvent("postsLoaded", {
