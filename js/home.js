@@ -34,19 +34,29 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create text container
             const textContainer = document.createElement('div');
             textContainer.className = 'home-text-container';
+            const textContainerTwo = document.createElement('div');
+            textContainerTwo.className = 'home-text-container-two';
 
             // Create heading
             const heading = document.createElement('h1');
             heading.textContent = 'Social Looping Legends';
+            heading.className = 'home-heading';
 
             // Create paragraph
             const paragraph = document.createElement('p');
             paragraph.textContent = 'Where the social media magic happens';
+            paragraph.className = 'home-paragraph';
 
             // Create paragraph 2
             const paragraphTwo = document.createElement('p');
             paragraphTwo.className = 'home-paragraph-two';
-            paragraphTwo.textContent = 'Social Looping Legends är ett unikt socialt nätverk som kombinerar det bästa av social interaktion med personlig produktivitet. Här kan du upptäcka och följa inspirerande personer samtidigt som du får en inblick i hur de organiserar sina liv.';
+          
+            const firstPart = document.createElement('span');
+            firstPart.textContent = 'Social Looping Legends';
+            firstPart.style.fontSize = 'larger';
+            const secondPart = document.createTextNode(' är ett unikt socialt nätverk som kombinerar det bästa av social interaktion med personlig produktivitet. Här kan du upptäcka och följa inspirerande personer samtidigt som du får en inblick i hur de organiserar sina liv.');
+            paragraphTwo.appendChild(firstPart);
+            paragraphTwo.appendChild(secondPart);
 
             // Assemble the header components
             imageContainer.appendChild(logoImage);
