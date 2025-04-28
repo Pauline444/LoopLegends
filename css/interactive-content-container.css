@@ -5,6 +5,7 @@
   justify-content: flex-start;
   flex-grow: 1;
   padding: 1rem auto;
+  background-color: var(--background-color);
 }
 
 .todo-wrapper {
