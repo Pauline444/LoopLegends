@@ -11,14 +11,18 @@
     width: 100%;
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+<<<<<<< HEAD
 .interactive-content-container {
     background-color: rgb(222, 222, 207);
 }
+=======
+
+>>>>>>> 1cb7f0b0208437d31f2d3d325d3a5e43390f5f22
 
 .main-content-cards {
     text-align: center;
