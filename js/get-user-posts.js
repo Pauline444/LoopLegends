@@ -22,24 +22,63 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function fetchUserPosts(userId, username) {
+    // Check if user header already exists for this user
+    let headerExists = false;
+    let userHeader = null;
+    
+    if (window.UserHeaderCreator) {
+      const headerState = window.UserHeaderCreator.checkExistingHeader(contentContainer);
+      headerExists = headerState.exists && headerState.userId === parseInt(userId, 10);
+      
+      if (headerExists) {
+        userHeader = contentContainer.querySelector('.user-header-container');
+      }
+    }
+    
+    // Clear the interactive content container
+    contentContainer.innerHTML = "";
+    
+    // If header existed for this user, put it back first
+    if (headerExists && userHeader) {
+      contentContainer.appendChild(userHeader);
+    } else {
+      // Create a loading indicator
+      const loadingIndicator = document.createElement("p");
+      loadingIndicator.textContent = "Laddar användarinformation...";
+      contentContainer.appendChild(loadingIndicator);
+      
+      // Use the UserHeaderCreator module to create a detailed user header
+      if (window.UserHeaderCreator) {
+        try {
+          userHeader = await window.UserHeaderCreator.createUserHeader(userId, username);
+          // Replace loading indicator with user header
+          contentContainer.replaceChild(userHeader, loadingIndicator);
+        } catch (error) {
+          console.error('Failed to create user header:', error);
+          const fallbackHeader = document.createElement('h2');
+          fallbackHeader.textContent = `Inlägg för ${username}`;
+          // Replace loading indicator with fallback header
+          contentContainer.replaceChild(fallbackHeader, loadingIndicator);
+        }
+      } else {
+        // Fallback if module is not available
+        const heading = document.createElement("h2");
+        heading.textContent = `Inlägg för ${username}`;
+        contentContainer.replaceChild(heading, loadingIndicator);
+        console.error('UserHeaderCreator module not found');
+      }
+    }
+    
     // Create the posts-wrapper div
     const postsWrapper = document.createElement("div");
     postsWrapper.classList.add("posts-wrapper");
-
-    // Create the heading
-    const heading = document.createElement("h2");
-    heading.textContent = `Inlägg för ${username}`;
-    postsWrapper.appendChild(heading);
+    contentContainer.appendChild(postsWrapper);
 
     // Create the posts-container div
     const postsContainer = document.createElement("div");
     postsContainer.classList.add("posts-container");
     postsContainer.textContent = "Laddar inlägg...";
     postsWrapper.appendChild(postsContainer);
-
-    // Clear the interactive content container and append the posts-wrapper
-    contentContainer.innerHTML = "";
-    contentContainer.appendChild(postsWrapper);
 
     try {
       const response = await fetch(
