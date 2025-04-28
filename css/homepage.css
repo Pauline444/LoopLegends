@@ -5,16 +5,14 @@
     flex-direction: column;
     width: 100%;
     min-height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
+    padding: 30px;
 }
 
 .home-header {
     width: 100%;
     margin-bottom: 30px;
-    padding: 15px;
     background-color: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,13 +23,13 @@
     align-items: center;
     justify-content: flex-start;
     gap: 40px;
-    width: 100%;
-    border: 1px solid #222;
+    width: 93%;
 }
 
 .logo-container {
     flex-shrink: 0;
-    width: 180px;
+    width: 260px;
+    margin: 30px;
     /* Making the logo container smaller */
 }
 
@@ -47,24 +45,34 @@
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    border: 1px solid #8e2020;
+    margin: 30px auto;
 }
 
 .home-heading {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 2.2rem;
-    border: 1px solid #222;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: var(--primary);
 }
 
 .home-paragraph {
-    font-size: 0.7rem;
+    font-size: 3.3rem;
     font-weight: lighter;
-    border: 1px solid #222;
+    margin-bottom: 30px;
 }
 
 .home-paragraph-two {
-    border: 1px solid #222;
+    max-width: 650px;
+    background-color: #243a23;
+    color: rgb(246, 242, 224);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+    font-size: smaller;
+    font-weight: lighter;
+    line-height: 1.4;
 }
 
 
