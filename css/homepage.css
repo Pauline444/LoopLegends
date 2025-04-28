@@ -89,17 +89,16 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 15px;
     width: 100%;
 }
 
 /* Class in javascript */
 .user-card {
-    width: 300px;
+    width: 320px;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 10px;
-    margin-bottom: 10px;
 }
 
 .user-card,
