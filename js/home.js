@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Create paragraph 2
             const paragraphTwo = document.createElement('p');
+            paragraphTwo.className = 'home-paragraph-two';
             paragraphTwo.textContent = 'Social Looping Legends är ett unikt socialt nätverk som kombinerar det bästa av social interaktion med personlig produktivitet. Här kan du upptäcka och följa inspirerande personer samtidigt som du får en inblick i hur de organiserar sina liv.';
 
             // Assemble the header components
