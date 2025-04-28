@@ -7,7 +7,7 @@
     overflow-y: auto;
 }
 
-/* User header styling - positioned outside the interactive wrapper */
+/* User header styling */
 .user-header-container {
     width: 100%;
     max-width: 1200px;
