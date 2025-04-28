@@ -36,14 +36,6 @@ async function fetchUsers() {
     }
 }
 
-// Function to get profile image based on user ID
-function getProfileImageSrc(userId) {
-    // Start from image 1 (assuming images are named img1.jpg, img2.jpg, etc.)
-    // Get the image number based on user ID, cycling back to 1 when needed
-    const imageNumber = ((userId - 1) % 10) + 1; // Using modulo 10 to cycle through images 1-10
-    return `assets/images/profile-image/img${imageNumber}.jpg`;
-}
-
 function showUsers(users, posts, userCardsContainer) {
     userCardsContainer.innerHTML = '';
     try {
@@ -57,18 +49,6 @@ function showUsers(users, posts, userCardsContainer) {
             const userCard = document.createElement('div');
             userCard.className = 'user-card';
 
-            // Add profile image to the user card
-            const profileImg = document.createElement('img');
-            profileImg.src = getProfileImageSrc(user.id);
-            profileImg.alt = `${user.username}'s profile`;
-            profileImg.classList.add('profile-image');
-            
-            // Add error handling for missing images, fallback to default
-            profileImg.onerror = function() {
-                this.src = "assets/images/profile-image/img1.jpg"; // Fallback to img1 if the sequence image isn't found
-                console.log(`Image for user ${user.id} not found, using fallback`);
-            };
-            
             userCard.innerHTML = `
                 <div class="user-info">
                     <h3>${user.username}</h3>
@@ -76,10 +56,6 @@ function showUsers(users, posts, userCardsContainer) {
                     <p><a href="mailto:${user.email}">${user.email}</a></p>
                     <p class="post-preview">${postPreview}</p>
                 </div>`;
-
-            // Insert profile image at the beginning of user-info
-            const userInfo = userCard.querySelector('.user-info');
-            userInfo.insertBefore(profileImg, userInfo.firstChild);
 
             userCard.addEventListener('click', function () {
                 window.currentUser = {

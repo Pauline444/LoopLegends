@@ -1,129 +1,13 @@
-.posts-wrapper, .todo-wrapper {
+.posts-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
     overflow-y: auto;
-}
-
-/* User header styling */
-.user-header-container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    background-color: #f9f9f9;
-    border-radius: var(--border-radius);
-    box-shadow: var(--border-shadow);
-    background-color: var(--white);
-    backdrop-filter: var(--backdrop-filter);
-}
-
-.user-header-info {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.user-avatar {
-    flex-shrink: 0;
-}
-
-.user-avatar .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.user-details {
-    flex-grow: 1;
-}
-
-.user-details h2 {
-    margin: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
-    color: var(--dark);
-}
-
-.user-details .user-username {
-    margin: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: var(--secondary);
-    font-weight: 500;
-}
-
-.user-details .user-email,
-.user-details .user-phone {
-    margin: 0.25rem 0;
-    font-size: 1rem;
-    color: var(--gray);
-}
-
-.user-details .user-email a {
-    color: var(--blue);
-    text-decoration: none;
-}
-
-.user-details .user-email a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .user-header-info {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-    
-    .user-avatar .profile-image {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-/* Todo list styling */
-.todo-list {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0;
-    list-style: none;
-}
-
-.todo-list li {
-    background-color: var(--white);
-    margin-bottom: 0.5rem;
     padding: 1rem;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    box-shadow: var(--border-shadow);
 }
 
-.todo-list li input[type="checkbox"] {
-    margin-right: 1rem;
-    width: 20px;
-    height: 20px;
-}
-
-.todo-list li.checked label {
-    text-decoration: line-through;
-    color: var(--gray);
-}
-
-.todo-list li label {
-    flex-grow: 1;
-    margin: 0;
-    cursor: pointer;
-}
-
-/* Posts container styles */
 .posts-container {
     display: flex;
     flex-direction: row;
