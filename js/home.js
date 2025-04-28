@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const firstPart = document.createElement('span');
             firstPart.textContent = 'Social Looping Legends';
             firstPart.style.fontSize = 'larger';
-            const secondPart = document.createTextNode(' är ett unikt socialt nätverk som kombinerar det bästa av social interaktion med personlig produktivitet. Här kan du upptäcka och följa inspirerande personer samtidigt som du får en inblick i hur de organiserar sina liv.');
+            const secondPart = document.createTextNode(' är ett modernt nätverk för dig som vill växa - både personligt och professionellt. Upptäck inspirerande individer, se hur de strukturerar sina dagar och ta del av deras bästa metoder för fokus, balans och framgång.');
             paragraphTwo.appendChild(firstPart);
             paragraphTwo.appendChild(secondPart);
 
