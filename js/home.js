@@ -50,13 +50,13 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create paragraph 2
             const paragraphTwo = document.createElement('p');
             paragraphTwo.className = 'home-paragraph-two';
+          
             const firstPart = document.createElement('span');
             firstPart.textContent = 'Social Looping Legends';
             firstPart.style.fontSize = 'larger';
             const secondPart = document.createTextNode(' är ett unikt socialt nätverk som kombinerar det bästa av social interaktion med personlig produktivitet. Här kan du upptäcka och följa inspirerande personer samtidigt som du får en inblick i hur de organiserar sina liv.');
             paragraphTwo.appendChild(firstPart);
             paragraphTwo.appendChild(secondPart);
-
 
             // Assemble the header components
             imageContainer.appendChild(logoImage);
