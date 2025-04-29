@@ -3,20 +3,22 @@ async function showUserTodoList(userId, username) {
   const contentContainer = document.querySelector(
     ".interactive-content-container"
   );
-  
+
   // Check if we already have a header for the current user
   let headerExists = false;
   let userHeader = null;
-  
+
   if (window.UserHeaderCreator) {
-    const headerState = window.UserHeaderCreator.checkExistingHeader(contentContainer);
-    headerExists = headerState.exists && headerState.userId === parseInt(userId, 10);
-    
+    const headerState =
+      window.UserHeaderCreator.checkExistingHeader(contentContainer);
+    headerExists =
+      headerState.exists && headerState.userId === parseInt(userId, 10);
+
     if (headerExists) {
-      userHeader = contentContainer.querySelector('.user-header-container');
+      userHeader = contentContainer.querySelector(".user-header-container");
     }
   }
-  
+
   // Clear the entire container but save the header if it exists
   if (headerExists && userHeader) {
     // Store the header temporarily
@@ -27,43 +29,46 @@ async function showUserTodoList(userId, username) {
   } else {
     // Clear everything and create a new header
     contentContainer.innerHTML = "";
-    
+
     // If we have the user header creator module, use it to create a detailed header
     if (window.UserHeaderCreator) {
       const loadingIndicator = document.createElement("p");
       loadingIndicator.textContent = "Laddar användarinformation...";
       contentContainer.appendChild(loadingIndicator);
-      
+
       try {
-        userHeader = await window.UserHeaderCreator.createUserHeader(userId, username);
+        userHeader = await window.UserHeaderCreator.createUserHeader(
+          userId,
+          username
+        );
         // Replace loading indicator with the user header
         contentContainer.replaceChild(userHeader, loadingIndicator);
       } catch (error) {
-        console.error('Failed to create user header:', error);
-        const fallbackHeader = document.createElement('h2');
+        console.error("Failed to create user header:", error);
+        const fallbackHeader = document.createElement("h2");
         fallbackHeader.textContent = `Todo-lista för ${username}`;
         // Replace loading indicator with fallback header
         contentContainer.replaceChild(fallbackHeader, loadingIndicator);
       }
     } else {
       // Fall back to simple header if module isn't available
-      const simpleHeader = document.createElement('h2');
+      const simpleHeader = document.createElement("h2");
       simpleHeader.textContent = `Todo-lista för ${username}`;
       contentContainer.appendChild(simpleHeader);
     }
   }
-  
+
   // Now create the todo wrapper as a separate container
   const todoWrapper = document.createElement("div");
   todoWrapper.classList.add("todo-wrapper");
   contentContainer.appendChild(todoWrapper);
-  
+
   // Create a new todo list element
   const todoList = document.createElement("ul");
   todoList.classList.add("todo-list");
   todoList.innerHTML = "Laddar todo-lista...";
   todoWrapper.appendChild(todoList);
-  
+
   // get todos
   fetch("https://jsonplaceholder.typicode.com/todos")
     .then((response) => response.json())
@@ -96,7 +101,7 @@ async function showUserTodoList(userId, username) {
         li.appendChild(checkbox);
         li.appendChild(label);
         todoList.appendChild(li);
-        
+
         // Add checked class if completed
         if (todo.completed) {
           li.classList.add("checked");

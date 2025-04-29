@@ -1,159 +1,162 @@
-.posts-wrapper, .todo-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    flex-grow: 1;
-    padding: 20px;
+.posts-wrapper,
+.todo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  padding: 20px;
 }
 
 /* User header styling */
 .user-header-container {
-    width: 100%;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--border-shadow);
-    background-color: var(--background-color);
-    backdrop-filter: var(--backdrop-filter);
+  width: 28%;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--border-shadow);
+  background-color: var(--background-color);
+  backdrop-filter: var(--backdrop-filter);
+  margin-top: 1rem;
+  border: 2px solid greenyellow;
 }
 
 .user-header-info {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .user-avatar {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .user-avatar .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .user-details {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .user-details h2 {
-    margin: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.8rem;
-    color: var(--dark);
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: var(--dark);
 }
 
 .user-details .user-username {
-    margin: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: var(--secondary);
-    font-weight: 500;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--secondary);
+  font-weight: 500;
 }
 
 .user-details .user-email,
 .user-details .user-phone {
-    margin: 0.25rem 0;
-    font-size: 1rem;
-    color: var(--gray);
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  color: var(--gray);
 }
 
 .user-details .user-email a {
-    color: var(--blue);
-    text-decoration: none;
+  color: var(--blue);
+  text-decoration: none;
 }
 
 .user-details .user-email a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .user-header-info {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-    
-    .user-avatar .profile-image {
-        width: 80px;
-        height: 80px;
-    }
+  .user-header-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .user-avatar .profile-image {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /* Todo list styling */
 .todo-list {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0;
-    list-style: none;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+  list-style: none;
 }
 
 .todo-list li {
-    background-color: var(--white);
-    margin-bottom: 0.5rem;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    box-shadow: var(--border-shadow);
+  background-color: var(--white);
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--border-shadow);
 }
 
 .todo-list li input[type="checkbox"] {
-    margin-right: 1rem;
-    width: 20px;
-    height: 20px;
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
 }
 
 .todo-list li.checked label {
-    text-decoration: line-through;
-    color: var(--gray);
+  text-decoration: line-through;
+  color: var(--gray);
 }
 
 .todo-list li label {
-    flex-grow: 1;
-    margin: 0;
-    cursor: pointer;
+  flex-grow: 1;
+  margin: 0;
+  cursor: pointer;
 }
 
 /* Posts container styles */
 .posts-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 2em;
-    width: 100%;
-    overflow-y: auto;
-    max-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2em;
+  width: 100%;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
 }
 
 .post-card {
-    background-color: var(--background-color);
-    border-radius: var(--border-radius);
-    padding: 1rem;
-    box-shadow: var(--border-shadow);
-    background-color: var(--white);
-    backdrop-filter: var(--backdrop-filter);
-    flex-grow: 0;
-    flex-shrink: 1;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--border-shadow);
+  background-color: var(--white);
+  backdrop-filter: var(--backdrop-filter);
+  flex-grow: 0;
+  flex-shrink: 1;
 }
 
 .post-card h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 1.2rem;
-    text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .post-card .post-body {
-    color: #555;
-    line-height: 1.6;
-    font-size: 0.9rem;
-    text-align: left;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  text-align: left;
 }
