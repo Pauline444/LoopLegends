@@ -14,6 +14,7 @@
 }
 
 body {
+    color: #243a23;
     font-family: Arial, sans-serif;
     height: 100vh;
     width: 100vw;
@@ -37,7 +38,7 @@ body.menu-open {
     .main-container {
         flex-direction: column;
     }
-    
+
     .interactive-content-container {
         padding-top: 1rem;
     }
