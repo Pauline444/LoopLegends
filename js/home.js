@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create text container
             const textContainer = document.createElement('div');
             textContainer.className = 'home-text-container';
+            const textContainerTwo = document.createElement('div');
+            textContainerTwo.className = 'home-text-container-two';
 
             // Create heading
             const heading = document.createElement('h1');
