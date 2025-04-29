@@ -38,10 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create heading
             const heading = document.createElement('h1');
             heading.textContent = 'Social Looping Legends';
+            heading.className = 'home-heading';
 
             // Create paragraph
             const paragraph = document.createElement('p');
             paragraph.textContent = 'Where the social media magic happens';
+            paragraph.className = 'home-paragraph';
 
             // Create paragraph 2
             const paragraphTwo = document.createElement('p');
