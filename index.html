@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <link rel="stylesheet" href="css/styles.css" />
+    <!-- Order scripts for proper loading sequence -->
+    <script src="./js/navbar.js" defer></script>
+    <script src="./js/home.js" defer></script>
+    <script src="./js/show-to-do.js" defer></script>
+    <script type="module" src="./js/get-all-users.js" defer></script>
+    <script type="module" src="./js/userSession.js" defer></script>
+    <script src="./js/user-header-creator.js" defer></script>
+    <script type="module" src="./js/get-user-posts.js" defer></script>
+    <script type="module" src="./js/get-post-comments.js" defer></script>
+    <script type="module" src="./js/home-cards.js" defer></script>
+    <script src="./js/mobile-menu.js" defer></script>
 
-  <!-- Order scripts for proper loading sequence -->
-  <script src="./js/navbar.js" defer></script>
-  <script src="./js/home.js" defer></script>
-  <script src="./js/show-to-do.js" defer></script>
-  <script type="module" src="./js/get-all-users.js" defer></script>
-  <script type="module" src="./js/userSession.js" defer></script>
-  <script src="./js/user-header-creator.js" defer></script>
-  <script type="module" src="./js/get-user-posts.js" defer></script>
-  <script type="module" src="./js/get-post-comments.js" defer></script>
-  <script type="module" src="./js/home-cards.js" defer></script>
-  <script src="./js/mobile-menu.js" defer></script>
+    <title>SLL</title>
+  </head>
 
-  <title>SLL</title>
-</head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-tab"><a href="#" id="home-link">Home</a></li>
+          <li class="nav-tab"><a href="#" id="post.link">Posts</a></li>
+          <li class="nav-tab"><a href="#" id="todo-link">To-Do</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-tab"><a href="#" id="home-link">Home</a></li>
-        <li class="nav-tab"><a href="#" id="post.link">Posts</a></li>
-        <li class="nav-tab"><a href="#" id="todo-link">To-Do</a></li>
-      </ul>
-    </nav>
-  </header>
+    <main class="main-container">
+      <!-- Hamburger menu button for mobile -->
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  <main class="main-container">
-    <!-- Hamburger menu button for mobile -->
-    <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <!-- Overlay for mobile menu -->
-    <div id="menu-overlay" class="menu-overlay"></div>
-    
-    <aside class="aside-container">
-    </aside>
+      <!-- Overlay for mobile menu -->
+      <div id="menu-overlay" class="menu-overlay"></div>
 
-    <section class="interactive-content-container">
+      <aside class="aside-container"></aside>
+
+      <section class="interactive-content-container">
         <!-- Content will be loaded dynamically by JavaScript -->
-    </section>
-  </main>
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>
