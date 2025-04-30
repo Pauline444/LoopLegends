@@ -10,7 +10,7 @@
 
 /* User header styling */
 .user-header-container {
-  width: 28%;
+  width: 35%;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: var(--border-radius);
@@ -75,6 +75,11 @@
   text-decoration: underline;
 }
 
+@media (max-width: 1100px) {
+  .user-header-container {
+    width: 93%;
+  }
+}
 /* Responsive design */
 @media (max-width: 768px) {
   .user-header-info {
