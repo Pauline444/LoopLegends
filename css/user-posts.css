@@ -18,7 +18,7 @@
   background-color: var(--background-color);
   backdrop-filter: var(--backdrop-filter);
   margin-top: 1rem;
-  border: 2px solid greenyellow;
+  border: 2px solid var(--primary);
 }
 
 .user-header-info {
@@ -80,6 +80,7 @@
     width: 93%;
   }
 }
+
 /* Responsive design */
 @media (max-width: 768px) {
   .user-header-info {

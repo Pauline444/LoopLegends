@@ -10,7 +10,8 @@ nav {
   align-items: center;
   flex-direction: row;
   list-style: none;
-  gap: 0; /* Removed the gap so elements appear directly next to each other */
+  gap: 0;
+  /* Removed the gap so elements appear directly next to each other */
   height: 100%;
   color: var(--text-color);
 }
@@ -28,7 +29,7 @@ nav {
   background-color: var(--hover);
 }
 
-.nav-tab > * {
+.nav-tab>* {
   text-decoration: none;
   color: black;
   border-radius: var(--border-radius);
@@ -46,7 +47,7 @@ nav {
 }
 
 .nav-tab a.active {
-  background-color: lightgreen;
+  background-color: var(--primary);
 }
 
 /* Active navbar item styling 

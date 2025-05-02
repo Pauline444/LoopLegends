@@ -53,7 +53,7 @@
     font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: lighter;
-    color: #9ed489;
+    color: var(--primary);
 }
 
 .home-paragraph {
@@ -160,6 +160,7 @@
     text-align: center;
     overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
 }
 
 .user-info h3 {
